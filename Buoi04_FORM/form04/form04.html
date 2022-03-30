@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FORM 04</title>
+	<meta charset="utf-8">
+	<!-- Chèn liên kết tập tin CSS vào đây -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Chèn liên kết các tập tin JavaScripts vào đây -->
+	<script  src="check.js" > </script>
+</head>
+
+<body>
+	<form name="f" action="https://fit.agu.edu.vn/demo.php" method="get">
+		<table border="0" width="400" align="center">
+			<tr>
+				<th colspan="2">Thông tin đăng ký</th>
+
+			</tr>
+			<tr>
+				<td>Họ và tên</td>
+				<td> <input type="text" name="HoVaTen"></td>
+			</tr>
+			<tr>
+				<td>Ngày Sinh</td>
+				<td> 
+					<select name="Ngay">
+						<Option value=" ">Ngày</Option>
+						<script>
+							for(var i=1; i<=31;i++)
+							{
+								document.write('<option>'+i+'</option>')
+							}
+						</script>
+					</select>
+					<select name="Thang">
+						<Option value=" ">Tháng</Option>
+						<script>
+							for(var i=1; i<=12;i++)
+							{
+								document.write('<option>'+i+'</option>')
+							}
+						</script>
+						
+					</select>
+					<select name="Nam">
+						<Option value=" ">Năm</Option>
+						<script>
+						var d = new Date();
+						var NamHT=d.getFullYear();
+						for(var i=1970; i<=NamHT;i++)
+							{
+								document.write('<option>'+i+'</option>')
+							}
+						</script>
+					
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Giới Tính</td>
+				<td> 
+					<input type="radio" name="GioiTinh" value="Nam" checked>Nam
+					<input type="radio" name="GioiTinh" value="Nu">Nữ
+					<input type="radio" name="GioiTinh" value="Khac">Khác
+
+				</td>
+			</tr>
+			<tr>
+				<td>Nghề Nghiệp</td>
+				<td> 
+					<select name="Nghề Nghiệp">
+						<option value=" " >---Chọn---</option>
+						<option >Luật sư</option>
+						<option >Kỹ sư</option>
+						<option >Bác sĩ</option>
+						<option >Giáo viên</option>
+						<option selected >Sinh viên</option>
+						<option >Nghề Khác</option>
+						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Ghi Chú</td>
+				<td> 
+					<textarea name="GhiChu" id="" cols="30" rows="10"></textarea>
+				</td>
+			</tr>
+		
+			<tr>
+				<td></td>
+				<td><button onclick="return check()" >Đăng ký</button>
+					<button type="reset" >Xóa làm lại</button>
+				</td>
+				
+			</tr>
+	</form>
+</body>
+
+</html>

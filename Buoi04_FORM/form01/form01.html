@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FORM 01</title>
+	<meta charset="utf-8">
+	<!-- Chèn liên kết tập tin CSS vào đây -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Chèn liên kết các tập tin JavaScripts vào đây -->
+	<script  src="checkfrom.js" > </script>
+</head>
+
+<body>
+	<form name="f" action="https://fit.agu.edu.vn/demo.php" method="get">
+		<table border="1" width="400" align="center">
+			<TR>
+				<th colspan="2">Thông tin dang nhap</th>
+
+			</TR>
+			<tr>
+				<td>tên đăng nhâp</td>
+				<td> <input type="text" name="TenDangNhap"></td>
+			</tr>
+			<tr>
+				<td>Mật Khẩu</td>
+				<td> <input type="password" name="MatKhau"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center" ><button onclick="return check()" >Đăng Nhập</button></td>
+			</tr>
+			<!-- Chèn nội dung FORM vào đây -->
+		</table>
+	</form>
+</body>
+
+</html>
